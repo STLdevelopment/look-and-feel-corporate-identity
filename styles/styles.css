@@ -1,0 +1,387 @@
+/* General styles */
+@font-face {
+    font-family: 'Yrsa';
+    src: url('../assets/fonts/yrsa.woff2') format('woff2'),
+        url('../assets/fonts/yrsa.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Economica';
+    src: url('/assets/fonts/Economica/Economica-Regular.ttf') format('truetype');
+}
+
+:root {
+    --body-font-size: 1rem;
+    --body-font-size-m: clamp(1rem, 0.5208vw + 0.8958rem, 1.3125rem);
+    --body-font-size-l: clamp(1rem, 0.7292vw + 0.8542rem, 1.4375rem);
+    --heading-font-size: clamp(1.5rem, 1.6667vw + 1.1667rem, 2.5rem);
+    --heading-font-size-l: clamp(1.75rem, 2.0833vw + 1.3333rem, 3rem);
+
+    --primary-color: hsl(40 99.1% 55.7%);
+    --primary-color-dark: hsl(39 90.9% 42.9%);
+
+    --secondary-color: hsl(244 24% 35.1%);
+    --secondary-color-dark: hsl(245 51.5% 20.2%);
+    /* Body text color */
+    --secondary-color-dark-50: hsla(245 51.5% 20.2% / 0.5);
+    --secondary-color-dark-25: hsla(245 51.5% 20.2% / 0.25);
+    --secondary-color-dark-10: hsla(245 51.5% 20.2% / 0.1);
+
+    --steunkleur-cyan: hsl(184 98.8% 32.9%);
+    --steunkleur-cyan-light: hsl(184 48.5% 53.5%);
+    --steunkleur-cyan-light-50: hsl(184 48.5% 53.5% / 0.5);
+
+    --steunkleur-oranje: hsl(13 69.8% 48%);
+    --steunkleur-oranje-light: hsl(10 93.4% 64.3%);
+    --steunkleur-oranje-light-50: hsl(10 93.4% 64.3% / .5);
+
+    --steunkleur-paars: hsl(292 24% 51%);
+    --steunkleur-paars-light: hsl(292 24.2% 64.3%);
+    --steunkleur-paars-light-50: hsl(292 24.2% 64.3% / .5);
+
+    --steunkleur-groen: hsl(64 100% 29.6%);
+    --steunkleur-groen-light: hsl(63 42.1% 50.6%);
+    --steunkleur-groen-light-50: hsl(63 42.1% 50.6% / .5);
+
+    --steunkleur-rood: hsl(333 100% 29.6%);
+    --steunkleur-rood-light: hsl(349 55.6% 47.6%);
+    --steunkleur-rood-light-50: hsl(349 55.6% 47.6% / .5);
+
+    --steunkleur-blauw: hsl(197 100% 22.7%);
+    --steunkleur-blauw-light: hsl(202 53.5% 39.6%);
+    --steunkleur-blauw-light-50: hsl(202 53.5% 39.6% / .5);
+}
+
+.vis-hidden {
+    display: block;
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+* {
+    padding: unset;
+    margin: unset;
+}
+
+main {
+    padding: 0 20px;
+}
+
+section {
+    max-width: 1300px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+
+/* General font styling */
+body {
+    font-family: "Yrsa", serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Economica", serif;
+}
+
+a {
+    text-decoration: unset;
+}
+
+.button {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--secondary-color-dark);
+        transition: all .35s;
+    }
+
+   &:hover {
+        color: #fff;
+    }
+
+    &:hover:after {
+        height: 100%;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #F3F3F6;
+
+    .menu-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .menu-items {
+            display: flex;
+            gap: 3rem;
+
+            .menu-item {
+                color: var(--secondary-color-dark);
+            }
+        }
+    }
+
+    .menu-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color-dark);
+            padding: 16px 22px;
+        }
+    }
+}
+
+
+/* Breadcrumbs general */
+ul.breadcrumbs {
+    list-style-type: "";
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+
+    * {
+        font-size: var(--body-font-size);
+        color: #1D194E;
+    }
+
+    li:last-child {
+        font-weight: 700;
+    }
+}
+
+.tekenmethodes-hero {
+    padding: 4rem 0 1.5rem;
+
+    form {
+        position: relative;
+        margin: 1.5rem 0;
+
+        input#tekenmethodes-search {
+            display: block;
+            width: 100%;
+            padding: 14px 20px 14px calc(1rem + 20px + .76rem);
+            border: 1px solid #F3F3F6;
+        }
+
+        svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translatey(-50%);
+        }
+    }
+
+    .page-navigation {
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .75rem;
+            max-width: 15rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        img {
+            object-fit: contain;
+            width: 7rem;
+            height: 7rem;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Yrsa';
+            font-size: 1rem;
+            color: var(--secondary-color-dark);
+            text-wrap: balance;
+        }
+    }
+}
+
+/* Tekenmethodes sections */
+section[class^="tekenmethodes-section"] {
+
+    h2 {
+        background-color: #4FBBC2;
+        color: var(--secondary-color-dark);
+        padding: 12px 20px;
+    }
+
+    iframe {
+        margin: 2rem 0;
+    }
+
+    .masonry {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: dense;
+        gap: 2rem;
+
+        .masonry-item:not(.textfield) {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            color: var(--secondary-color-dark);
+            font-weight: 900;
+
+            article {
+                flex-grow: 2;
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 1rem;
+
+                img {
+                    width: 100%;
+                    border: 1px solid #4FBBC2;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .masonry-item.textfield {
+            background-color: #4FBBC2;
+            color: white;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            padding: 3rem 4rem;
+
+            dt {
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: var(--secondary-color-dark);
+                text-wrap: balance;
+            }
+        }
+    }
+}
+
+.masonry-item:nth-child(12n - 5) {
+    grid-column-start: 1;
+}
+
+.masonry-item:nth-child(12n - 4) {
+    grid-column-start: 2;
+}
+
+:nth-child(12n - 3) {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.masonry-item:nth-child(24n - 14) {
+    grid-column: span 2 / span 2;
+}
+
+.masonry-item:nth-child(24n - 2) {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.masonry-item:nth-child(12n - 1) {
+    grid-column-start: 3;
+}
+
+.masonry-item:nth-child(12n) {
+    grid-column-start: 4;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color-dark);
+    padding: 3rem 20px;
+
+    >section {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr repeat(4, 1fr);
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            >a {
+                display: flex;
+
+                img {
+                    min-width: 10rem;
+                }
+            }
+
+            ul {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    nav {
+        color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        a {
+            color: white;
+            font-family: 'Yrsa';
+            font-size: 1rem;
+        }
+    }
+}
