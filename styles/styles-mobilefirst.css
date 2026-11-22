@@ -173,6 +173,10 @@ header {
                 background-size: 1rem;
                 background-repeat: no-repeat;
                 background-position: 1rem center;
+
+                &::placeholder {
+                    color: var(--color-secondary);
+                }
             }
         }
 
