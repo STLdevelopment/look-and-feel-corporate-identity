@@ -168,15 +168,9 @@ header {
             & input {
                 width: inherit;
                 border: 1px solid #D1D0DB;
-                padding: .75rem 1.25rem;
-
-                &::after {
-                    content: '';
-                    height: 1rem;
-                    aspect-ratio: 1;
-                    background-image: url('/assets/icons/Zoeken-icoon.svg');
-                    background-size: contain;
-                }
+                padding: .75rem 1.25rem .75rem 2.25rem;
+                background-image: url('/assets/icons/Zoeken-icoon.svg');
+                background-size: 1rem;
             }
         }
 
