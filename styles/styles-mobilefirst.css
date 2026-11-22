@@ -186,3 +186,10 @@ header {
         }
     }
 }
+
+.leren-reflecteren-section {
+
+    iframe {
+        aspect-ratio: 16/9;
+    }
+}
