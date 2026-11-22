@@ -236,7 +236,10 @@ header {
                 background-color: #FFF;
             }
         }
+
+        .quote {
+            display: flex;
+            align-items: center;
+        }
     }
-
-
 }
