@@ -159,7 +159,7 @@ header {
     & .filtergroup {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 2.5rem;
 
         & form {
             width: 100%;
@@ -168,9 +168,11 @@ header {
             & input {
                 width: inherit;
                 border: 1px solid #D1D0DB;
-                padding: .75rem 1.25rem .75rem 2.25rem;
+                padding: .75rem 1.25rem .75rem 3rem;
                 background-image: url('/assets/icons/Zoeken-icoon.svg');
                 background-size: 1rem;
+                background-repeat: no-repeat;
+                background-position: 1rem center;
             }
         }
 
