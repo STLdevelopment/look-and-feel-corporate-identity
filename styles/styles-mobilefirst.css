@@ -197,7 +197,7 @@ header {
         display: grid;
         row-gap: 2rem;
 
-        @media (> 37rem) {
+        @media (width > 37rem) {
             grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
         }
 
