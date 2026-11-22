@@ -135,10 +135,18 @@ main {
     .breadcrumbs {
         display: flex;
         list-style-type: '';
-        color: var(--color-secondary);
+
+        & a {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
 
         & li:not(:last-child)::after {
             content: " > ";
+        }
+
+        & li:last-child {
+            font-weight: 700;
         }
     }
 }
