@@ -199,6 +199,7 @@ header {
 
         @media (width > 37rem) {
             grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+            column-gap: 2rem;
         }
 
         .masonry-item article {
