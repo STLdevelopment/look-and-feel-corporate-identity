@@ -52,7 +52,7 @@ a {
         transition: all .35s;
     }
 
-   &:hover {
+    &:hover {
         color: #fff;
     }
 
@@ -98,10 +98,6 @@ header {
 
             .menu-item {
                 color: var(--secondary-color-dark);
-
-                &:is(.account,.likes) {
-                    display: none;
-                }
             }
         }
     }
@@ -110,6 +106,10 @@ header {
         display: flex;
         align-items: center;
         gap: 1.5rem;
+
+        &:is(.account, .likes) {
+            display: none;
+        }
 
         .button {
             background-color: var(--primary-color);
