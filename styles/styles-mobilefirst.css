@@ -72,6 +72,12 @@ a {
     width: 1px !important;
 }
 
+/* General page styling */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header styling */
 header {
     display: flex;
@@ -120,4 +126,9 @@ header {
             }
         }
     }
+}
+
+/* Main content styling */
+main {
+    order: -1;
 }
