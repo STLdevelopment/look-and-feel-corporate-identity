@@ -207,12 +207,17 @@ header {
             h3 {
                 color: #FFF;
                 padding: .5rem .75rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
                 &::after {
                     content: '';
                     height: 1rem;
+                    display: block;
                     aspect-ratio: 1;
                     background-image: url('../assets/icons/Chrevron-right.svg');
+                    background-size: contain;
                 }
             }
 
