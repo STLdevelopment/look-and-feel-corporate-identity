@@ -193,12 +193,19 @@ header {
         aspect-ratio: 16/9;
     }
 
-    .masonry-item article {
-        display: flex;
-        flex-direction: column-reverse;
+    .masonry {
+        display: grid;
+        column-gap: 2rem;
 
-        & img {
-            width: 100%;
+        .masonry-item article {
+            display: flex;
+            flex-direction: column-reverse;
+
+            & img {
+                width: 100%;
+            }
         }
     }
+
+
 }
