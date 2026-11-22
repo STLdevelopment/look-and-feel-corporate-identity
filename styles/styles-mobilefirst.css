@@ -135,9 +135,10 @@ main {
     .breadcrumbs {
         display: flex;
         list-style-type: '';
+        color: var(--color-secondary);
 
         & li:not(:last-child)::after {
-            content: ">";
+            content: " > ";
         }
     }
 }
