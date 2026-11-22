@@ -111,8 +111,13 @@ header {
             height: 2rem;
             width: 2rem;
 
-            &:is(.account, .likes) {
+            & .account, .likes {
                 display: none;
+            }
+
+            & path {
+                stroke: var(--color-secondary);
+                fill: var(--color-secondary);
             }
         }
     }
