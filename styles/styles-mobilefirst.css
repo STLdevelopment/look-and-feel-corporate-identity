@@ -98,6 +98,10 @@ header {
 
             .menu-item {
                 color: var(--secondary-color-dark);
+
+                &:is(.account,.likes) {
+                    display: none;
+                }
             }
         }
     }
