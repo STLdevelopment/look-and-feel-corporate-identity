@@ -80,6 +80,7 @@ body {
 
 /* Header styling */
 header {
+    order: -1;
     display: flex;
     justify-content: space-between;
     padding: 1.25rem;
@@ -129,10 +130,6 @@ header {
 }
 
 /* Main content styling */
-main {
-    order: -1;
-}
-
 .breadcrumbs {
     display: flex;
     list-style-type: '';
