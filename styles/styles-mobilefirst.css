@@ -117,7 +117,7 @@ header {
             height: 2rem;
             width: 2rem;
 
-            &:is(.account,.likes) {
+            &:is(.account, .likes) {
                 display: none;
             }
 
@@ -156,9 +156,15 @@ header {
         order: -1;
     }
 
-    /* MARK: Color to var */
-    & form input {
-        border: 1px solid #D1D0DB;
-        padding: .75rem 1.25rem;
+    & .filtergroup {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        /* MARK: Color to var */
+        & form input {
+            border: 1px solid #D1D0DB;
+            padding: .75rem 1.25rem;
+        }
     }
 }
