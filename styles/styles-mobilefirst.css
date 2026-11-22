@@ -197,6 +197,10 @@ header {
         display: grid;
         row-gap: 2rem;
 
+        @media (> 37rem) {
+            grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        }
+
         .masonry-item article {
             display: flex;
             flex-direction: column-reverse;
@@ -210,6 +214,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                gap: 1rem;
 
                 &::after {
                     content: '';
