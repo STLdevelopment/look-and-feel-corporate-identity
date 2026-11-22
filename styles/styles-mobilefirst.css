@@ -192,4 +192,13 @@ header {
     iframe {
         aspect-ratio: 16/9;
     }
+
+    .masonry-item {
+        display: flex;
+        flex-direction: column-reverse;
+
+        & img {
+            width: 100%;
+        }
+    }
 }
