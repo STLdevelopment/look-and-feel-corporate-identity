@@ -193,7 +193,7 @@ header {
         aspect-ratio: 16/9;
     }
 
-    .masonry-item {
+    .masonry-item article {
         display: flex;
         flex-direction: column-reverse;
 
