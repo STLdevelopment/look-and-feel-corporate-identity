@@ -131,4 +131,12 @@ header {
 /* Main content styling */
 main {
     order: -1;
+
+    .breadcrumbs {
+        display: flex;
+
+        & li:not(:last-child)::after {
+            content: ">";
+        }
+    }
 }
