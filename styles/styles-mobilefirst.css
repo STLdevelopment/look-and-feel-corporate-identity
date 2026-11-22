@@ -91,8 +91,10 @@ header {
         gap: 2rem;
 
         .menu-items {
-            display: flex;
-            gap: 3rem;
+            /* display: flex;
+            gap: 3rem; */
+
+            display: none;
 
             .menu-item {
                 color: var(--secondary-color-dark);
