@@ -107,8 +107,13 @@ header {
         align-items: center;
         gap: 1.5rem;
 
-        & :is(.account, .likes) {
-            display: none;
+        & svg {
+            height: 2rem;
+            width: 2rem;
+
+            &:is(.account, .likes) {
+                display: none;
+            }
         }
     }
 }
