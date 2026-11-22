@@ -134,6 +134,7 @@ main {
 
     .breadcrumbs {
         display: flex;
+        list-style-type: '';
 
         & li:not(:last-child)::after {
             content: ">";
