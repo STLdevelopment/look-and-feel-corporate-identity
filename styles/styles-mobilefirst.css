@@ -82,13 +82,18 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-bottom: 1px solid #F3F3F6;
 
     .menu-left {
         display: flex;
         align-items: center;
         gap: 2rem;
+
+        & img {
+            width: 3rem;
+            aspect-ratio: 1;
+        }
 
         .menu-items {
             /* display: flex;
