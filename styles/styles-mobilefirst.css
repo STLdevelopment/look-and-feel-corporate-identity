@@ -203,8 +203,6 @@ header {
         }
 
         @media (width > 81.25rem) {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
             grid-auto-flow: dense;
 
             :nth-child(12n - 5) {
@@ -283,11 +281,6 @@ header {
             }
 
             :not(.textfield) {
-                display: flex;
-                flex-direction: column;
-                gap: .75rem;
-                color: var(--secondary-color-dark);
-                font-weight: 900;
 
                 article {
                     flex-grow: 2;
