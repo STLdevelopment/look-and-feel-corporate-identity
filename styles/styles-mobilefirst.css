@@ -181,9 +181,10 @@ header {
             outline: unset;
             display: inline-flex;
             background-color: transparent;
+            cursor: pointer;
 
             svg {
-                    width: 3rem;
+                    width: 4rem;
                     aspect-ratio: 1;
 
                     circle {
