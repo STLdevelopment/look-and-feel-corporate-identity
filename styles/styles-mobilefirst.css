@@ -180,9 +180,17 @@ header {
             outline: unset;
             display: inline-flex;
 
-            img {
+            svg {
                     width: 3rem;
                     aspect-ratio: 1;
+
+                    circle {
+                        fill: var(--color-secondary);
+                    }
+
+                    path {
+                        stroke: #FFF;
+                    }
             }
 
             input[type="checkbox"] {
