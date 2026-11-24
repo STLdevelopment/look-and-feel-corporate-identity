@@ -161,28 +161,35 @@ header {
         justify-content: space-between;
         gap: 2.5rem;
 
-        & form {
+        & input[type="search"] {
             width: 100%;
+            border: 1px solid #D1D0DB;
+            padding: .75rem 1.25rem .75rem 3rem;
+            background-image: url('../assets/icons/Zoeken-icoon.svg');
+            background-size: 1rem;
+            background-repeat: no-repeat;
+            background-position: 1rem center;
 
-            /* MARK: Color to var */
-            & input {
-                width: inherit;
-                border: 1px solid #D1D0DB;
-                padding: .75rem 1.25rem .75rem 3rem;
-                background-image: url('../assets/icons/Zoeken-icoon.svg');
-                background-size: 1rem;
-                background-repeat: no-repeat;
-                background-position: 1rem center;
-
-                &::placeholder {
-                    color: var(--color-secondary);
-                }
+            &::placeholder {
+                color: var(--color-secondary);
             }
         }
 
-        & img {
-            width: 3rem;
-            aspect-ratio: 1;
+        label {
+            padding: 0;
+            outline: unset;
+            display: inline-flex;
+
+            img {
+                    width: 3rem;
+                    aspect-ratio: 1;
+            }
+
+            input[type="checkbox"] {
+                appearance: none;
+                border: unset;
+                padding: unset;
+            }
         }
     }
 }
