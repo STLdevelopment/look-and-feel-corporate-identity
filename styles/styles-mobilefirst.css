@@ -203,16 +203,21 @@ header {
     display: flex;
     flex-direction: column;
 
-    & .breadcrumbs {
-        order: -1;
+    h1 {
+        margin: 2rem 0 1.5rem;
     }
 
-    & .filtergroup.filtergroup {
+    .breadcrumbs {
+        order: -1;
+        margin-top: 4rem;
+    }
+
+    .filtergroup.filtergroup {
         display: flex;
         justify-content: space-between;
         gap: 2.5rem;
 
-        & input[type="search"] {
+        input[type="search"] {
             width: 100%;
             border: 1px solid #D1D0DB;
             padding: .75rem 1.25rem .75rem 3rem;
@@ -265,7 +270,7 @@ header {
 
     .categoryItems {
         overflow: scroll;
-        margin-top: 1rem;
+        margin-top: 2rem;
 
         @media (width > 81.25rem) {
             overflow: hidden;
@@ -338,6 +343,7 @@ header {
 .filter-section:has(#showCategories:not(:checked)) .categoryItems {
     pointer-events: none;
     max-height: 0px;
+    margin-top: unset;
 
     @media (prefers-reduced-motion: no-preference) {
         transition: .4s ease;
