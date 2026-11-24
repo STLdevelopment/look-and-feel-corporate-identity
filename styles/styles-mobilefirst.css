@@ -149,7 +149,7 @@ header {
     }
 }
 
-.filter-section {
+.filter-section.filter-section {
     display: flex;
     flex-direction: column;
 
@@ -157,7 +157,7 @@ header {
         order: -1;
     }
 
-    & .filtergroup {
+    & .filtergroup.filtergroup {
         display: flex;
         justify-content: space-between;
         gap: 2.5rem;
@@ -173,6 +173,10 @@ header {
 
             &::placeholder {
                 color: var(--color-secondary);
+            }
+
+            label {
+                background-color: unset;
             }
         }
 
@@ -196,9 +200,14 @@ header {
                 }
             }
 
+            &:has(input[type="checkbox"]:checked) circle {
+                fill: ;
+            }
+
             input[type="checkbox"] {
                 appearance: none;
                 border: unset;
+                outline: unset;
                 padding: unset;
             }
         }
@@ -244,7 +253,15 @@ header {
 }
 
 .filter-section:has(#showCategories:not(:checked)) .categoryItems {
-    display: none;
+    transition: .4s ease;
+    pointer-events: none;
+    max-height: 0px;
+}
+
+.filter-section:has(#showCategories:checked) .categoryItems {
+    transition: 1s ease;
+    pointer-events: unset;
+    max-height: 100vh;
 }
 
 .leren-reflecteren-section {
