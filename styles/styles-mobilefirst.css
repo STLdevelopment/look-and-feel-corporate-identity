@@ -214,6 +214,8 @@ header {
 
             legend {
                 margin-bottom: 1rem;
+                position: sticky;
+                left: 0;
             }
 
             label {
