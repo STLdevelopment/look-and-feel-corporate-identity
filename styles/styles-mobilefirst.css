@@ -184,16 +184,16 @@ header {
             cursor: pointer;
 
             svg {
-                    width: 4rem;
-                    aspect-ratio: 1;
+                width: 4rem;
+                aspect-ratio: 1;
 
-                    circle {
-                        fill: var(--color-secondary);
-                    }
+                circle {
+                    fill: var(--color-secondary);
+                }
 
-                    path {
-                        stroke: #FFF;
-                    }
+                path {
+                    stroke: #FFF;
+                }
             }
 
             input[type="checkbox"] {
@@ -203,6 +203,46 @@ header {
             }
         }
     }
+
+    .categoryItems {
+        overflow: scroll;
+        margin-top: 1rem;
+
+        fieldset {
+            border: unset;
+            gap: 2rem;
+
+            legend {
+                margin-bottom: 1rem;
+            }
+
+            label {
+                padding: unset;
+                background-color: unset;
+                outline: unset;
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    appearance: none;
+                    border: unset;
+                    padding: unset;
+                }
+
+                img {
+                    width: 8rem;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.filter-section:has(#showCategories:not(:checked)) .categoryItems {
+    display: none;
 }
 
 .leren-reflecteren-section {
