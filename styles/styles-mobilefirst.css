@@ -275,9 +275,11 @@ header {
                 }
             }
 
-            .quote {
+            &.quote {
                 display: flex;
                 align-items: center;
+                text-align: center;
+                text-wrap: balance;
             }
 
             :not(.textfield) {
@@ -294,10 +296,6 @@ header {
                         height: 100%;
                         object-fit: contain;
                     }
-                }
-
-                h3 {
-                    font-size: 1.25rem;
                 }
             }
         }
