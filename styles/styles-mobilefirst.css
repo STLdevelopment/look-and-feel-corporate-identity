@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     overflow-x: clip;
+    background-color: #F3F3F6;
 }
 
 * {
@@ -179,6 +180,7 @@ header {
             padding: 0;
             outline: unset;
             display: inline-flex;
+            background-color: transparent;
 
             svg {
                     width: 3rem;
