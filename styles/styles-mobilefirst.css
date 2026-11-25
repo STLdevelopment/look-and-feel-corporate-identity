@@ -2,6 +2,11 @@ html {
     box-sizing: border-box;
     overflow-x: clip;
     background-color: #F3F3F6;
+    --transition: none;
+
+    @media (prefers-reduced-motion: no-preference) {
+        --transition: ease-out var(--transition-duration, .4s);
+    }
 }
 
 * {
@@ -44,10 +49,7 @@ a {
         width: 100%;
         height: 0;
         background: var(--secondary-color-dark);
-
-        @media (prefers-reduced-motion: no-preference) {
-            transition: .35s;
-        }
+        transition: var(--transition);
     }
 
     &:hover {
@@ -171,10 +173,7 @@ header {
 
             &:hover:after {
                 transform: translateY(0%);
-
-                @media (prefers-reduced-motion: no-preference) {
-                    transition: .3s;
-                }
+                transition: var(--transition);
             }
         }
     }
@@ -255,10 +254,6 @@ header {
                 }
             }
 
-            &:has(input[type="checkbox"]:checked) circle {
-                fill: ;
-            }
-
             input[type="checkbox"] {
                 appearance: none;
                 border: unset;
@@ -317,10 +312,7 @@ header {
                     color: white;
                     border-radius: 20px;
                     padding: 1.5rem 1.25rem;
-
-                    @media (prefers-reduced-motion: no-preference) {
-                        transition: .3s ease;
-                    }
+                    transition: var(--transition);
 
                     img {
                         filter: brightness(0) invert(1);
@@ -344,19 +336,14 @@ header {
     pointer-events: none;
     max-height: 0px;
     margin-top: unset;
-
-    @media (prefers-reduced-motion: no-preference) {
-        transition: .4s ease;
-    }
+    transition: var(--transition);
 }
 
 .filter-section:has(#showCategories:checked) .categoryItems {
     pointer-events: unset;
     max-height: 100vh;
-
-    @media (prefers-reduced-motion: no-preference) {
-        transition: 1s ease;
-    }
+    transition: var(--transition);
+    --transition-duration: 1s;
 }
 
 .masonry-section {
@@ -424,18 +411,14 @@ header {
         }
 
         .masonry-item {
-            @media (prefers-reduced-motion: no-preference) {
-                transition: .3s;
-            }
+            transition: var(--transition);
 
             &:not(.quote):hover {
                 transform: translate(-.25rem, -.25rem);
                 box-shadow: .5rem .5rem 0rem 0rem #000000;
                 border-radius: .5rem;
-
-                @media (prefers-reduced-motion: no-preference) {
-                    transition: .2s;
-                }
+                transition: var(--transition);
+                --transition-duration: .2s;
 
                 h3 {
                     text-decoration: underline;
